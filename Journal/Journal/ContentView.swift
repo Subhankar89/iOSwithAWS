@@ -13,9 +13,20 @@ struct ContentView: View {
     @ObservedObject private var userData: UserData = .shared
     
     var body: some View {
-        List {
-            ForEach(userData.notes) { note in
-                ListRow(note: note)
+        /// Depending on UserData.isSignedIn's value, the UI shows either a SigninButton or the main List view.
+        ZStack {
+            if (userData.isSignedIn) {
+                NavigationView {
+                    List {
+                        ForEach(userData.notes) { note in
+                            ListRow(note: note)
+                        }
+                    }
+                    .navigationBarTitle(Text("Notes"))
+                    .navigationBarItems(leading: SignOutButton())
+                }
+            } else {
+                SignInButton()
             }
         }
     }

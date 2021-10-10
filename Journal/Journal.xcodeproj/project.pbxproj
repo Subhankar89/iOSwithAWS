@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CF89AF18063AF90A40FEBB1 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 0911A5D6C57BBEC9A3A3E8E7 /* awsconfiguration.json */; };
+		9E4EFADE2712CCC00048D9A9 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4EFADD2712CCC00048D9A9 /* SignInButton.swift */; };
+		9E4EFAE02712CCF10048D9A9 /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4EFADF2712CCF10048D9A9 /* SignOutButton.swift */; };
 		9E57868927117DA40022993A /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E57868827117DA40022993A /* JournalApp.swift */; };
 		9E57868B27117DA40022993A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E57868A27117DA40022993A /* ContentView.swift */; };
 		9E57868D27117DA90022993A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E57868C27117DA90022993A /* Assets.xcassets */; };
@@ -24,6 +26,9 @@
 		0911A5D6C57BBEC9A3A3E8E7 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		214B12A2464E78B88E3C9E7A /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		4B9C78DC567F8501A798EC7B /* Pods-Journal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journal.release.xcconfig"; path = "Target Support Files/Pods-Journal/Pods-Journal.release.xcconfig"; sourceTree = "<group>"; };
+		9E4EFADD2712CCC00048D9A9 /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
+		9E4EFADF2712CCF10048D9A9 /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
+		9E4EFAE42712CF0B0048D9A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9E57868527117DA40022993A /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E57868827117DA40022993A /* JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalApp.swift; sourceTree = "<group>"; };
 		9E57868A27117DA40022993A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +80,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9E4EFAE12712CD050048D9A9 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9E4EFADD2712CCC00048D9A9 /* SignInButton.swift */,
+				9E4EFADF2712CCF10048D9A9 /* SignOutButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		9E4EFAE22712CD2B0048D9A9 /* ModelData */ = {
+			isa = PBXGroup;
+			children = (
+				9E57869627117E300022993A /* Note.swift */,
+				9E57869827117E5A0022993A /* UserData.swift */,
+			);
+			path = ModelData;
+			sourceTree = "<group>";
+		};
+		9E4EFAE32712CD390048D9A9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				9E57869A27117EB30022993A /* ListRow.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		9E57867C27117DA40022993A = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +129,12 @@
 		9E57868727117DA40022993A /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				9E4EFAE42712CF0B0048D9A9 /* Info.plist */,
 				9E57868827117DA40022993A /* JournalApp.swift */,
-				9E57869627117E300022993A /* Note.swift */,
-				9E57869827117E5A0022993A /* UserData.swift */,
-				9E57869A27117EB30022993A /* ListRow.swift */,
+				9E4EFAE22712CD2B0048D9A9 /* ModelData */,
+				9E4EFAE32712CD390048D9A9 /* CustomView */,
 				9E57868A27117DA40022993A /* ContentView.swift */,
+				9E4EFAE12712CD050048D9A9 /* Buttons */,
 				9E57868C27117DA90022993A /* Assets.xcassets */,
 				9E57868E27117DA90022993A /* Preview Content */,
 			);
@@ -225,9 +257,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Journal/Pods-Journal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Journal/Pods-Journal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -241,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4EFADE2712CCC00048D9A9 /* SignInButton.swift in Sources */,
 				9E57868B27117DA40022993A /* ContentView.swift in Sources */,
 				9E57868927117DA40022993A /* JournalApp.swift in Sources */,
+				9E4EFAE02712CCF10048D9A9 /* SignOutButton.swift in Sources */,
 				9E93FAA127118B8500FAB4A8 /* Backend.swift in Sources */,
 				9E57869927117E5A0022993A /* UserData.swift in Sources */,
 				9E57869727117E300022993A /* Note.swift in Sources */,
@@ -381,6 +419,7 @@
 				DEVELOPMENT_TEAM = D4NJBY4S25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Journal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -412,6 +451,7 @@
 				DEVELOPMENT_TEAM = D4NJBY4S25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Journal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

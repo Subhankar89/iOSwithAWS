@@ -10,6 +10,11 @@
       "StackName": "amplify-journal-dev-133529",
       "StackId": "arn:aws:cloudformation:ap-south-1:368473538866:stack/amplify-journal-dev-133529/ae5330d0-28d7-11ec-a2c0-0a392caf54a0",
       "AmplifyAppId": "d3bxdyvd807qhe"
+    },
+    "categories": {
+      "auth": {
+        "journal79529b3e": {}
+      }
     }
   }
 }
